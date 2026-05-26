@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll; 
+}
+
+body {
+    min-height: 100dvh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    margin: 1%;
+    
+}
+
+.cabecalho img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cabecalho__menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    margin: 0 12.4% 0 0;
+    gap: 2%;
+    flex-flow: row wrap;
+}
+
+.cabecalho__menu a {
+    font-size: 1.5rem;
+    font-weight: 450;
+    font-family: "Miranda Sans", sans-serif;
+    text-decoration: none;
+    color: #1351d8;
+}
+
+.cabecalho__menu a:hover {
+    color: #1268b9;
+}
+
+
+
+.principal__home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.principal__home_slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;      
+    justify-content: center;  
+    gap: 10px;
+}
+
+.principal__home_slider img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1440px;
+}
+
+#carousel-link {
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#carousel-link img {
+    width: 100%;
+    flex-shrink: 0;
+    height: auto;
+    display: block;
+}
+
+.slide-next {
+    animation: slideInRight 0.5s ease-out forwards;
+}
+
+.slide-prev {
+    animation: slideInLeft 0.5s ease-out forwards;
+}
+
+div#carousel {
+    max-width: 100%;
+    background-size: cover; 
+    background-position: center;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+div#carousel-title  {
+    text-align: center;
+    font-size: 1.25rem;
+    font-family: "Miranda Sans", sans-serif;
+    margin: 0.5%;
+}
+
+#prev-button, #next-button {
+    width: 50px;
+    height: auto;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#prev-button img, #next-button img {
+    width: 100%;
+    height: auto;
+    user-select: none;
+}
+
+#prev-button {
+    transform: rotate(180deg);
+}
+
+#prev-button img:hover, #next-button img:hover {
+    width: 103%;
+    height: 101%;
+    user-select: none;
+}
+
+
+
+.principal__lancamento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 20px;
+}
+
+.principal__lancamento iframe {
+    padding: 25px 0 0 0;
+    max-width: 100%;
+    max-height: auto;
+}
+
+.principal__lancamento h2 {
+    text-align: center;
+    color: #1351d8;
+    font-family: "Miranda Sans", sans-serif;
+}
+
+.principal__lancamento__texto {
+    text-align: justify;
+    width: 100%;
+    max-width: 40rem;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 1.05rem;
+    font-family: "Miranda Sans", sans-serif;
+}
+
+.principal__lancamento__lista {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Miranda Sans", sans-serif;
+    gap: 50px;
+}
+
+.principal__lancamento__lista__carros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+.principal__lancamento__lista__carros__linha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.principal__lancamento__lista__carros__coluna {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.principal__lancamento__lista__carros__info {
+    position: relative;
+}
+
+.principal__lancamento__lista__carros__info img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display: block;
+}
+
+.texto {
+    position: absolute;
+    width: 300px;
+    bottom: 20px;
+    left: 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.principal__lancamento__lista__carros__info:hover .texto {
+    opacity: 1;
+}
+
+.principal__lancamento__lista__carros__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.principal__lancamento__lista__carros__checkbox input {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.principal__lancamento__lista__carros__titulo {
+    font-size: 1.25rem;
+    color: #1351d8;
+    user-select: none;
+}
+
+.principal__lancamento__lista__carros__valor {
+    font-size: 1rem;
+    user-select: none;
+}
+
+.principal__lancamento__botao {
+    color: white;
+    font-size: 1rem;
+    font-family: "Miranda Sans", sans-serif;
+    background-color: #1242ac;
+    border: none;
+    padding: 15px 50px;
+    margin: 0 0 20px 0;
+    border-radius: 16px;
+}
+
+.principal__lancamento__botao:hover {
+    color: white;
+    background-color: #1268b9;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    margin-bottom: 10px;
+}
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+td:nth-child(1) {  
+    font-weight: 700;
+    width: 40%;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+.botao__fechar button{
+    color: white;
+    font-size: 1rem;
+    font-family: "Miranda Sans", sans-serif;
+    background-color: #1242ac;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 10px;
+    border-radius: 16px;
+}
+
+.botao__fechar button:hover {
+    color: white;
+    background-color: #1268b9;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+div#compare {
+    position: absolute;
+    display: none;
+    width: 100vw;
+    max-width: 800px;
+    height: auto;
+    max-height: 85vh;
+    background: #fff;
+    font-family: "Miranda Sans", sans-serif;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+    -webkit-box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
+    box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
+}
+
+
+
+.principal__contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.principal__contato img {
+    width: 463px;
+    height: auto;
+}
+
+.principal__contato_input {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    font-family: "Miranda Sans", sans-serif;
+    gap: 2px;
+}
+
+.principal__contato_input input[type="email"], input[type="text"], select {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    font-size: 0.875rem;
+}
+
+.principal__contato__botao {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #1242ac;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 1rem;
+}
+
+.principal__contato__botao:hover {
+    color: white;
+    background-color: #1268b9;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3% 0.8%;
+    background-color: #1b2f66;
+    color: white;
+    font-size: 1rem;
+    font-family: "Miranda Sans", sans-serif;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.rodape img {
+    width: 100%;
+    height: auto;
+}
+
+.rodape__redes_sociais {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rodape__redes_sociais img {
+    display: flex;
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.rodape__direitos_autorais {
+    margin: 0 6% 0 0;
+}
+
+
+
+@media (max-width: 600px) {
+    div#compare {
+        position: absolute;
+        top: 121%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 92vw;
+        max-height: 90vh;
+        padding: 10px 5px;
+    }
+
+    table {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    th, td {
+        font-size: 0.8rem;
+        padding: 6px 4px;
+    }
+
+    td:nth-child(1) {  
+        width: 35%;
+        font-weight: 700;
+    }
+
+    #compare td img {
+        max-width: 100px;
+        width: 100%;
+        height: auto;
+    }
+
+    div#carousel-title  {
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    #prev-button, #next-button {
+    width: 25px;
+    height: auto;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+}
+
+@media (max-width: 850px) {
+    .cabecalho {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cabecalho img {
+        width: 150px;
+        height: auto;
+    }
+
+    .cabecalho__menu {
+        margin: 0;
+        gap: 4%;
+        flex-flow: row wrap;
+    }
+
+    .cabecalho a {
+        font-size: 1.1rem;
+    }
+
+
+
+    .principal__home {
+        text-align: center;
+        margin: 3%;
+        font-size: 0.8rem;
+    }
+
+
+
+    .principal__lancamento h2 {
+        font-size: 1.2rem;
+    }
+
+    .principal__lancamento__texto {
+        font-size: 0.9rem;
+    }
+
+
+
+    .principal__contato {
+        flex-direction: column;
+    }
+
+    .principal__contato img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .principal__contato__botao {
+        margin-bottom: 30px;
+    }
+
+
+
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 10px;
+        gap: 10px;
+    }
+
+    .rodape p {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1269px) {
+    .principal__lancamento iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+}
+
+@media (max-width: 1660px) {
+    .texto {
+    position: absolute;
+    width: 260px;
+    bottom: -110px;
+    left: -280px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+    }
+}

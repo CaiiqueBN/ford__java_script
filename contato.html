@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Caique Braga Nunes">
+    <meta name="description" content="Página criada para estudo de HTML e CSS">
+    <meta name="keywords" content="Programação, HTML5, CSS3">
+    <title>Ford | Contato</title>
+    <link rel="icon" href="./img/icon2.png" type="image/png">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+            <a href="index.html"><img src="./img/logo-ford-256.png" alt="Logo Ford maior"></a>
+        <nav class="cabecalho__menu">
+            <a href="index.html">Home</a>
+            <a href="lancamento.html">Lançamento</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main class="principal__contato">
+        <img src="./img/xls 2.2 diesel.jpg" alt="XLS">
+
+        <form class="principal__contato_input" onsubmit="event.preventDefault(); Post(this);">
+            <p>Sobre Você:</p>
+            <input type="text" id="nome" name="nome" required placeholder="NOME*">
+            <input type="text" id="sobrenome" name="sobrenome" required placeholder="SOBRENOME*">
+            <input type="email" id="campoEmail" name="email" required placeholder="E-MAIL*">
+            <input type="text" id="cpf" name="cpf" required placeholder="CPF*">
+            <input type="text" id="telefone" name="telefone" required placeholder="TELEFONE*">
+
+            <select id="tipoContato" name="tipoContato" required>
+                <option value="">TIPO DO CONTATO</option>
+                <option value="Elogio">ELOGIO</option>
+                <option value="Reclamacao">RECLAMAÇÃO</option>
+                <option value="Solicitacao">SOLICITAÇÃO</option>
+            </select>
+
+            <input type="text" id="mensagem" name="mensagem" placeholder="MENSAGEM">
+
+            <select id="desejoContato" required>
+                <option value="">COMO DESEJA SER CONTATADO</option>
+                <option value="Email">E-MAIL</option>
+                <option value="Telefone">TELEFONE</option>
+                <option value="WhatsApp">WHATSAPP</option>
+            </select>
+    
+            <button type="submit" class="principal__contato__botao">Enviar</button>
+        </form>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape__redes_sociais">
+            <p>Redes Sociais:</p>
+            <a href="https://web.facebook.com/FordBrasil" target="_blank"><img src="./img/facebook-50.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/FordBrasil" target="_blank"><img src="./img/youtube-squared-50.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/FordBrasil" target="_blank"><img src="./img/instagram-logo-50.png" alt="Instagram"></a>
+        </div>
+            <p class="rodape__direitos_autorais">© 2026 Ford Brasil | Viva o Novo. Todos os direitos reservados.</p>
+        <section>
+            <img src="./img/ford-96.png" alt="Logo Ford menor">
+        </section>
+    </footer>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

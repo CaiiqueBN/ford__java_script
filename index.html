@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Caique Braga Nunes">
+    <meta name="description" content="Página criada para estudo de HTML e CSS">
+    <meta name="keywords" content="Programação, HTML5, CSS3">
+    <title>Ford | Home</title>
+    <link rel="icon" href="./img/icon2.png" type="image/png">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="js/carousel.js"></script>
+</head>
+<body>
+    <header class="cabecalho">
+            <a href="index.html"><img src="./img/logo-ford-256.png" alt="Logo Ford maior"></a>
+        <nav class="cabecalho__menu">
+            <a href="index.html">Home</a>
+            <a href="lancamento.html">Lançamento</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main class="principal__home">
+        <div class="principal__home_slider">
+            <button id="prev-button"><img src="./img/arrow.png" alt="prev-button"></button>
+            <div class="carousel-container">
+                <a id="carousel-link" href="lancamento.html">
+                    <img src="./img/imagem_1.jpg" alt="Ranger Ford 2022">
+                    <img src="./img/imagem_2.jpg" alt="Ford História">
+                    <img src="./img/imagem_3.jpg" alt="Ford Bronco Sport 2022">
+                </a>
+            </div>
+            <button id="next-button"><img src="./img/arrow.png" alt="next-button"></button>
+        </div>
+        <div id="carousel-title"></div>
+        <script>
+            carouselArr.push(new Carousel("imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades <a href='lancamento.html'>aqui</a>.", "lancamento.html"));
+            carouselArr.push(new Carousel("imagem_2.jpg","Ford, a nossa história começa <a href='lancamento.html'>aqui</a>.","#"));
+            carouselArr.push(new Carousel("imagem_3.jpg","Nova Ford Bronco Sport 2022, conheça <a href='lancamento.html'>aqui</a>.","lancamento.html"));
+            Carousel.Start(carouselArr);
+        </script>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape__redes_sociais">
+            <p>Redes Sociais:</p>
+            <a href="https://web.facebook.com/FordBrasil" target="_blank"><img src="./img/facebook-50.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/FordBrasil" target="_blank"><img src="./img/youtube-squared-50.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/FordBrasil" target="_blank"><img src="./img/instagram-logo-50.png" alt="Instagram"></a>
+        </div>
+            <p class="rodape__direitos_autorais">© 2026 Ford Brasil | Viva o Novo. Todos os direitos reservados.</p>
+        <section>
+            <img src="./img/ford-96.png" alt="Logo Ford menor">
+        </section>
+    </footer>
+</body>
+</html>
