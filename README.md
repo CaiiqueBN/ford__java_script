@@ -1,1 +1,1 @@
-https://ford-java-script.vercel.app/index.html
+https://ford-java-script-e-lgpd.vercel.app/index.html
